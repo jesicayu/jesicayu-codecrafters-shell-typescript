@@ -9,7 +9,7 @@ const rl = createInterface({
 
 function startPrompting() {
   rl.question("$ ", (answer) => {
-    rl.write(`${answer}: command not found`);
+    rl.write(`${answer}: command not found \n`);
     startPrompting();
   });
 }
