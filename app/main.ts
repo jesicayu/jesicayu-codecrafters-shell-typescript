@@ -9,6 +9,9 @@ const rl = createInterface({
 
 function startPrompting() {
   rl.question("$ ", (answer) => {
+    if (answer.trim() === "exit 0") {
+      return rl.close();
+    }
     rl.write(`${answer}: command not found \n`);
     startPrompting();
   });
